@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Fornecedores </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fornecedor.css">
+
+
+</head>
+
+<body>
+
+<header>
+    <h1>FarmaControl ERP</h1>
+    <p>Fornecedores</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href = "produto.html">Produtos</a></li>
+        <li><a href="cliente.html">Clientes</a>
+        <li><a href="fornecedor.html">Fornecedores</a></li>
+        <li><a href="venda.html">Vendas</a></li>
+        <li><a href="item-venda.html">Itens da Venda</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <h2>Cadastro de Fornecedores</h2>
+
+    <form id="formFornecedor">
+    <input type="hidden" id="idFornecedor">
+        <div>
+        <label for= "nome">Nome do Fornecedor:</label>
+        <input type="text" id="nome" name="nome">
+        </div>
+
+        <div>
+        <label for= "cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj">
+        </div>
+
+    <div>
+      <label for= "telefone" >Telefone:</label>
+      <input type="text" id="telefone" name="telefone">
+    </div>
+
+    <div>
+        <label for= "email">Email:</label>
+      <input type="text" id="email" name="email">
+    </div>
+
+
+    <div class="botoes">
+
+        <button class="btn-cadastrar" type="submit">
+            Cadastrar</button>
+
+        <button class="btn-atualizar" type="button" onclick="atualizarFornecedorPeloFormulario()">
+            Atualizar</button>
+
+        <button class="btn-limpar" type="reset">
+            Limpar</button>
+    </div>
+
+         </form>
+
+        <table>
+          <thead>
+
+         <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Ações</th>
+    </thead>
+
+    <tbody id="tabelaFornecedor">
+        <!-- aqui os fornecedores serão inseridos pelo JS-->
+    </tbody> 
+    </table>
+</main>
+
+<footer>Informações adicionais</footer>
+<script src="../js/fornecedor.js"></script>
+
+</body>
